@@ -1,7 +1,9 @@
 import React from 'react'
+import Link from 'next/link'
+import SignIn from '@/app/SignIn/page'
 import userAvatar from './userAvatar'
-import { SignOut } from "./auth/signout-button"
 import {auth} from "@/app/auth"
+// import SignIn from './sign-in'
 
 const userName = async () => {
     const session = await auth()
@@ -17,6 +19,7 @@ const Navbar = () => {
   return <>
     <div>
       <p>Navbar</p>
+      <button className='border-2 p-4 bg-white text-black'><Link href="../SignIn">Sign In</Link></button> 
       {/* <userAvatar /> */}
     <p className='text-5xl text-center'>Signed in as {userName()}</p>
     </div>
