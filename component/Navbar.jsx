@@ -1,4 +1,5 @@
 import React from 'react'
+import userAvatar from './userAvatar'
 import { SignOut } from "./auth/signout-button"
 import {auth} from "@/app/auth"
 
@@ -16,6 +17,7 @@ const Navbar = () => {
   return <>
     <div>
       <p>Navbar</p>
+      {/* <userAvatar /> */}
     <p className='text-5xl text-center'>Signed in as {userName()}</p>
     </div>
   </>
