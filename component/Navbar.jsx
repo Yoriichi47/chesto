@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import SignIn from '@/app/SignIn/page'
+import { SignOut } from './auth/signout-button'
 import userAvatar from './userAvatar'
 import {auth} from "@/app/auth"
 // import SignIn from './sign-in'
@@ -19,8 +20,8 @@ const Navbar = () => {
   return <>
     <div>
       <p>Navbar</p>
-      <button className='border-2 p-4 bg-white text-black'><Link href="../SignIn">Sign In</Link></button> 
-      {/* <userAvatar /> */}
+      <button className='border-2 p-4 bg-white text-black'><Link href="../SignIn">Sign In</Link></button> <br />
+      {SignOut()}
     <p className='text-5xl text-center'>Signed in as {userName()}</p>
     </div>
   </>
